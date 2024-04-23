@@ -1,0 +1,56 @@
+body {  
+    background-color: #d8bbbb;
+    font-family: 'Courier New', Courier, monospace; 
+    color: #000a; 
+}
+.row.my_photo {
+    background: url(../images/photo1.jpg) no-repeat center center;
+    background-size: 100%;
+    width: 500px;
+    height: 750px;
+}
+.row.vanya_photo {
+    background: url(../images/photo2.jpg) no-repeat center center;
+    background-size: 100%;
+    width: 500px;
+    height: 400px;
+}
+.col-3.nav_logo{
+    background: url(../images/LOGO_Petrovich.png) no-repeat center center;
+    background-size: 100%;
+    width: 100px;
+    height: 100px;
+}
+.nav_bar {
+    font-size: 30px;
+    font-weight: bold;
+}
+.nav_text {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.container {
+    margin-top: 30px;
+}
+.col-9 {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.title_photo {
+    text-align: center;
+}
+.row {
+}
+.col-8 {
+}
+.col-4 {
+
+}
+.col-3.nav_logo {
+}
+
+.img_size {
+}
+
