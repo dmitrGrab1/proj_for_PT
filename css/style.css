@@ -41,6 +41,20 @@ body {
 .title_photo {
     text-align: center;
 }
+.button_js{
+    text-align: center;
+}
+#myButton{
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+#demo img{
+    margin-top: 20px;
+}
 .row {
 }
 .col-8 {
