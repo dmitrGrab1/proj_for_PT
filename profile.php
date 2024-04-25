@@ -51,6 +51,27 @@
     
     <div class="container">
         <div class="row">
+            <div class="col-12">
+                <h1 class="hello">
+                    Привет, <?php echo $_COOKIE['User']; ?>
+            </div>
+            <div class="col-12">
+                <h1 class="hello">
+                    <form method="POST" action="profile.php">
+                        <input type="text" class="form" type="text" name="title" placeholder="Заголовок поста">
+                    </form>
+            </div>
+            <div class="col-12">
+                <textarea style="margin-top: 20px; width: 1500px" name="text" cols="30" rows="10" placeholder="Введите текст поста ..."></textarea>
+            </div>
+            <div class="col-12">
+                <button style="margin-top: 20px" type="submit" class="btn_red" name="submit">Сохранить пост!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
             <div class="col-6">
                 <div class="col-10">
                     <h2>Маринованные огурчики «Дядя Ваня» – традиционная овощная закуска, идеально сочетающаяся с разными русскими блюдами. Продукция изготавливается из кубанских грунтовых отборных огурцов: сочных, хрустящих и обладающих приятным сладковатым привкусом.</h2>
@@ -67,3 +88,22 @@
 
 </body>
 </html>
+
+<?php
+require_once('db.php');
+
+$link = mysqli_connect('127.0.0.1', 'root', 'kali', 'first');
+
+
+if(isset($_POST['submit'])){
+
+    $title = $_POST['title'];
+    $main_text = $_POST['text'];
+    echo "ok";
+    if(!$title || !$main_text) die("Заполните все поля");
+
+    $sql = "INSERT INTO posts (title, main_text) VALUES ('$title', '$main_text')";
+
+    if(!mysqli_query($link, $sql)) die("Не удалось добавить пост");
+}
+?>
